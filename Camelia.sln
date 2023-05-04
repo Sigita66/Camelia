@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Camelia", "Camelia.csproj", "{8820DF9D-CA90-4219-98C5-B0BF29E61D63}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{35994CA6-2CEB-457B-BEB2-B3D0D167ED3B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8820DF9D-CA90-4219-98C5-B0BF29E61D63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8820DF9D-CA90-4219-98C5-B0BF29E61D63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8820DF9D-CA90-4219-98C5-B0BF29E61D63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8820DF9D-CA90-4219-98C5-B0BF29E61D63}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0FDAFBC8-6ED3-495A-BC2F-D9E6A4ED5FCC}
+	EndGlobalSection
+EndGlobal
