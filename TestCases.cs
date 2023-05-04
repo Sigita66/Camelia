@@ -77,6 +77,7 @@ namespace Camelia
         [Test]
         public void CheckLoginNonExistingAccount()
         {
+            //tikrina, gali prisijungti neegzistuojantis klientas
             topMenu.ClickLoginButton();
             topMenu.InputTextGeneratedDate();
             topMenu.InputFromFile();
@@ -86,6 +87,7 @@ namespace Camelia
         [Test]
         public void AddProductToCart()
         {
+            //tikrina, ar pavyksta įdėti produktą į krepšelį, ar krepšelio kaina lygi produkto kainai
             productCart.FirstProductPrice();
             productCart.ClickAddToCart();
             Assert.AreEqual(productCart.FirstProductPrice(), productCart.PriceCart());
@@ -94,6 +96,7 @@ namespace Camelia
         [Test]
         public void AddToCartAndRemove()
         {
+            //tikrina, ar pavyksta produktą įdėti į krepšelį ir po to išmesti
             productCart.ClickAddToCart();
             productCart.ClickTrash();
             Assert.AreEqual(productCart.EmptyTrashAlert(), "Jūsų krepšelyje nėra prekių".ToLower());
@@ -103,6 +106,7 @@ namespace Camelia
         [Test]
         public void CheckSorting()
         {
+            //tikrina, ar geras kainų rikiavimas didėjimo tvarka
             productList.ClickCategory(2);
             productList.ClickSorting(6);
             productList.CheckSortAscending(productList.PriceList());
@@ -110,6 +114,7 @@ namespace Camelia
         [Test]
         public void CheckSortAndBack()
         {
+            //tikrina, ar kainų rikiavimas išlieka paspaudus produktą ir grįžus
             productList.ClickCategory(3);
             productList.ClickSorting(6);
             productList.CheckSortAscending(productList.PriceList());

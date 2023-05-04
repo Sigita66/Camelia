@@ -41,10 +41,12 @@ namespace Camelia.POM
         }
         public void ClickCategory(int k)
         {
+            //pasirenka tam tikrą produktų kategoriją
             generalMethods.ClickElementBy(category + "[" + k + "]");
         }
         public void ClickSorting(int k)
         {
+            //pasirenka produktų rikiavimą
             generalMethods.ClickElementBy(sortButton);
             generalMethods.ScrollToElement(sorting);
             generalMethods.ClickElementBy(sorting);
@@ -57,20 +59,18 @@ namespace Camelia.POM
         }
         public double[] PriceList()
         {
+            //sudeda kainas į masyvą
             return generalMethods.GetArray(priceClub, priceRed, priceRegular);
         }
 
         public void CheckSortAscending(double[] priceList)
         {
 
-            Console.WriteLine(priceList.Length);
-            Console.WriteLine();
-
+            //tikrina, ar gerai išrikiuotos kainos
+            //priekyje yra reklaminiai produktai, tikrinant rikiavimą jų neįtraukia 
             for (int i = (generalMethods.CountElements(ad)) + 1; i < priceList.Length - 1; i++)
             {
 
-                Console.Write(i + " ");
-                Console.WriteLine(priceList[i]);
                 if (priceList[i] > priceList[i + 1])
                 {
                     Assert.Fail("Prices are not sorted");
@@ -79,9 +79,9 @@ namespace Camelia.POM
         }
 
 
-
         public void ClickProductAndGoBack()
         {
+            //pasirenka produktą ir grįžta atgal
             generalMethods.ClickElementBy(firstPruduct);
             driver.Navigate().Back();
         }

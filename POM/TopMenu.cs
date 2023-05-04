@@ -49,6 +49,7 @@ namespace Camelia.POM
        
         public void SearchFieldInput(string actualText)
         {
+            //įveda žodį į paieškos lauką
             generalMethods.SendKeys(searchField, actualText);
             generalMethods.ClickElementBy(searchButton);
                         
@@ -64,13 +65,13 @@ namespace Camelia.POM
         public void CheckProductName(string actualText)
         {
                         
+            //tikrina, ar įvestas žodis yra produktų pavadinimuose
             for (int i = 1; i < 49; i++)
             {
                generalMethods.CheckTextContains((productName + "[" + i + "]"), actualText);
                
             }
             
-
         }
         
         public void InputTextGeneratedDate()
@@ -80,6 +81,7 @@ namespace Camelia.POM
         }
         public void InputFromFile()
         {
+            //įveda slaptažodį iš failo
             generalMethods.SendKeys(passwordField, generalMethods.ReadFromFile());
         }
        
@@ -95,7 +97,7 @@ namespace Camelia.POM
         }
         public string CheckAlertExists()
         {
-            
+            //tikrina, ar yra tekstas apie nepavykusį prisijungimą
             return generalMethods.GetText(alertLogin);
 
         }

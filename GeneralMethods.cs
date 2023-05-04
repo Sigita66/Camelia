@@ -133,7 +133,7 @@ namespace Camelia
         }
         public double[] GetArray(string xpath1,string xpath2,string xpath3)
         {
-
+            //laukia, kol kainos išsirikiuos
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
             
             double[] array = new double[49];
@@ -162,12 +162,6 @@ namespace Camelia
             return array;
 
         }
-
-
-
-
-
-
 
     }
 }

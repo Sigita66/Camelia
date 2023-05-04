@@ -34,23 +34,28 @@ namespace Camelia.POM
                
         public string FirstProductPrice()
         {
+            //paima pirmo produkto kainą
             generalMethods.ScrollToElement(firstProduct);
             return generalMethods.GetText(priceProduct);
         }
         public void ClickAddToCart()
         {
+            //įdeda prekę į krepšelį
             generalMethods.ClickElementBy(cartButton);
         }
         public string PriceCart()
         {
+           //paima kainą iš krepšelio
             return generalMethods.GetText(priceCart);
         }
         public void ClickTrash()
         {
+            //išmeta prekę iš krepšelio
             generalMethods.ClickElementBy(remove);
         }
         public string EmptyTrashAlert()
         {
+            //tikrina, ar atsiranda tuščio krepšelio užrašas
             return generalMethods.GetText(empty);            
 
         }

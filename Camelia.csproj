@@ -61,7 +61,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GeneralMethods.cs" />
-    <Compile Include="POM\Juodrastis.cs" />
     <Compile Include="POM\ProductList.cs" />
     <Compile Include="POM\ProductCart.cs" />
     <Compile Include="POM\TopMenu.cs" />
